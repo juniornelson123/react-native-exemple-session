@@ -11,7 +11,7 @@ class Home extends React.Component {
             <Text>Main Page</Text>
             <Text>{this.props.user.user.name}</Text>
             <Text>{this.props.user.user.email}</Text>
-    		<Text>{this.props.user.password}</Text>
+    		<Text>{this.props.user.user.password}</Text>
     		<Button 
     			title="Logout"
     			onPress = {() => this.props.navigation.dispatch({ type: 'Logout' })}/>

@@ -28,9 +28,9 @@ class Splash extends React.Component {
  		this.state = {};
 
  		AsyncStorage.getItem('user').then(resp => {
- 			console.log(resp)
  			if (resp) {
- 				this.props.changeValue(resp)
+        console.log(JSON.parse(resp).user)
+ 				this.props.changeValue(JSON.parse(resp).user)
  				this.props.navigation.dispatch(isLoggedIn)
  			}else{
  				this.props.navigation.dispatch(notLoggedIn)
